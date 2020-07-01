@@ -11,7 +11,7 @@ const PostAllContainer = () => {
     return (
 
      <div>
-            <h3>AllContainer Contact</h3>
+            <h3>All Posts</h3>
             <div><PostAll /></div>
         </div>
     )

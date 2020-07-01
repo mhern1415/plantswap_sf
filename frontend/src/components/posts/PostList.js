@@ -2,6 +2,7 @@ import React from 'react';
 import { getPosts } from '../../actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import '../post.css'
 ///import { deleteContact } from '../../reducers/contactReducer';
 
 class PostList extends React.Component {
@@ -26,7 +27,7 @@ class PostList extends React.Component {
                                 <li>Zip: {post.job_title}</li>
                                 <li>Plant Type: {post.plant_type}</li>
                             </ul>
-                            <div><img src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-responsive" /></div>
+                            <div><img className="photo" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-responsive" /></div>
                             <div><a href={"mailto:" + post.contact}>Click Here To Email Seller</a></div>
     
                         </div>
