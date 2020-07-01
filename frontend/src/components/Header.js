@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div className="ui secondary pointing menu">
             <Link to="/" className="item">
-                My Posts
+                All Posts
             </Link>
             <div className="center menu">
                 <Link to="/posts/new" className="item">
@@ -13,8 +13,8 @@ const Header = () => {
                 </Link>
             </div>
             <div className="right menu">
-                <Link to="/posts/all" className="item">
-                    All Posts
+                <Link to="/posts/myposts" className="item">
+                    My Posts
                 </Link>
                 <GoogleAuth />
             </div>
