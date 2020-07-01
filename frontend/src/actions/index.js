@@ -30,3 +30,12 @@ export const addPost = (post, history) => {
       )
     }
   }
+
+  export const getPosts = () => {
+    return dispatch => {
+        dispatch({type: "LOADING_POSTS"});
+        return fetch ('http://localhost:3002/posts')
+        .then(resp => resp.json())
+        .then(posts => dispatch({type: "LOADED_POSTS", payload: posts}))
+    }
+}
