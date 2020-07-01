@@ -11,7 +11,7 @@ class PostFormContainer extends React.Component {
     render(){
     return (
      <div>
-            <h3>FormContainer Post</h3>
+            <h3>Post Your Plant!</h3>
             <div><PostForm addPost={this.props.addPost} history={this.props.history} /></div>
         </div>
     )

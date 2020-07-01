@@ -80,7 +80,7 @@ class PostForm extends React.Component {
                             type="text"
                             value={this.state.text}
                             onChange={(event) => this.handleOnChange(event)}
-                            placeholder="Dollar Amount"
+                            placeholder="Do not put $ sign"
                             required
                             autoComplete="off"
                             />
