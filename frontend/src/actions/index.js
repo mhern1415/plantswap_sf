@@ -1,5 +1,5 @@
 import { SIGN_IN, SIGN_OUT } from './types';
-import contacts from '../apis/posts';
+import posts from '../apis/posts';
 import axios from 'axios'
 
 export const signIn = (userId, userEmail) => {
@@ -15,3 +15,18 @@ export const signOut = () => {
         type: SIGN_OUT
     };
 };
+
+export const addPost = (post, history) => {
+    return dispatch => {
+      return fetch('http://localhost:3002/posts', {
+        method: "POST",
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({post})
+      }).then(resp => resp.json())
+        .then(post => {
+            dispatch({type: "ADD_POST", post})
+            history.push('/posts')
+        }
+      )
+    }
+  }

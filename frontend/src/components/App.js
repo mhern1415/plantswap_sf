@@ -2,8 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import PostFormContainer from './posts/PostFormContainer'
 import PostListContainer from './posts/PostListContainer'
-import PostList from './posts/PostList'
-import PostShow from './posts/PostShow'
+import PostShowContainer from './posts/PostShowContainer'
 import Header from './Header'
 import Footer from './Footer'
 import PostAllContainer from './posts/PostAllContainer'
@@ -17,11 +16,11 @@ const App = () => {
             <BrowserRouter>
                 <div>
                 <Header />
-                <Route path="/" exact component={PostListContainer}/>
+                <Route path="/" exact component={PostAllContainer}/>
                 <Route path="/posts" exact component={PostListContainer}/>
                 <Route path="/posts/new" exact component={PostFormContainer}/>
-                <Route path="/posts/all" exact component={PostAllContainer}/>
-                <Route path="/posts/:id" exact component={PostShow}/>
+                <Route path="/posts/myposts" exact component={PostListContainer}/>
+                <Route path="/post/:id" exact component={PostShowContainer}/>
                 <Route path="/posts/delete" exact component={PostDelete}/>
                 </div>
             </BrowserRouter>
