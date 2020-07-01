@@ -15,19 +15,22 @@ class PostList extends React.Component {
         const myPosts = this.props.posts.filter(post => post.user_id === this.props.currentUserId);
         return myPosts.map(post => {
             return (
-                <div className="item" key={post.id}>
+                <div className="column" key={post.id}>
                     <div className="content">
                         <p>{post.date}</p>
                         <div id="title">
-                            <div> Title: {post.title}</div>
-                            <Link to={`/post/${post.id}`}>{post.title}</Link>
-                            <ul>
-                                <li>Price: ${post.price}</li>
-                                <li>Description: {post.description}</li>
-                                <li>Zip: {post.job_title}</li>
-                                <li>Plant Type: {post.plant_type}</li>
-                            </ul>
+                            <div><Link to={`/post/${post.id}`}>{post.title}</Link></div>
+                            <br></br>                        
+                            <div>Price: ${post.price}</div>
+                            <br></br>
+                            <div>Description: {post.description}</div>
+                            <br></br>
+                            <div>Zip: {post.zip_code}</div>
+                            <br></br>
+                            <div>Plant Type: {post.plant_type}</div>
+                            <br></br>
                             <div><img className="photo" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-responsive" /></div>
+                            <br></br>
                             <div><a href={"mailto:" + post.contact}>Click Here To Email Seller</a></div>
     
                         </div>
@@ -41,7 +44,7 @@ class PostList extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="ui four column relaxed grid">
                 {this.renderList()}
             </div>
         )
