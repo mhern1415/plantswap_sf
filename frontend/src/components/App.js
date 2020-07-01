@@ -21,7 +21,6 @@ const App = () => {
                 <Route path="/posts/new" exact component={PostFormContainer}/>
                 <Route path="/posts/myposts" exact component={PostListContainer}/>
                 <Route path="/post/:id" exact component={PostShowContainer}/>
-                <Route path="/posts/delete" exact component={PostDelete}/>
                 </div>
             </BrowserRouter>
         <div>
