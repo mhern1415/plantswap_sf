@@ -1,23 +1,23 @@
 import React from 'react';
 import PostForm from './PostForm';
-///import ContactForm from './ContactForm';
-///import { connect } from 'react-redux';
+import { connect } from 'react-redux';
+import { addPost } from '../../actions'
 
-const PostFormContainer = () => {
-
-
+class PostFormContainer extends React.Component {
 
 
+
+
+    render(){
     return (
-
      <div>
-            <h3>FormContainer Contact</h3>
-            <div><PostForm /></div>
+            <h3>FormContainer Post</h3>
+            <div><PostForm addPost={this.props.addPost} history={this.props.history} /></div>
         </div>
     )
-
+    }
 
 
 }
 
-export default PostFormContainer;
+export default connect(null, { addPost })(PostFormContainer);
