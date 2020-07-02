@@ -14,7 +14,7 @@ class PostAll extends React.Component {
     renderList = () => {
         return this.props.posts.map(post => {
             return (
-                <div className="item" key={post.id}>
+                <div className="column" key={post.id}>
                     <div className="content">
                         <p>{post.date}</p>
                         <div id="title">
@@ -40,7 +40,7 @@ class PostAll extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="ui four column relaxed grid">
                 {this.renderList()}
             </div>
         )

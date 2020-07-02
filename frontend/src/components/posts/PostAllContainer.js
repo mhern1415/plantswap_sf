@@ -11,7 +11,7 @@ const PostAllContainer = () => {
     return (
 
      <div>
-            <h3>All Posts</h3>
+            <h1>All Posts</h1>
             <div><PostAll /></div>
         </div>
     )

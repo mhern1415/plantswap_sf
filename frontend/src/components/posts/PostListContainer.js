@@ -11,7 +11,7 @@ const PostListContainer = () => {
     return (
 
      <div>
-            <h3>My Posts</h3>
+            <h1>My Posts</h1>
             <div><PostList /></div>
         </div>
     )

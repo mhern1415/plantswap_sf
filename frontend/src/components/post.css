@@ -6,6 +6,20 @@ img {
 .column {
     padding: 50px;
     border-style: solid;
+    border-color: rgb(4, 235, 146);
     text-align: center
 
 }
+
+.post-form{
+    width: 800px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 30px;
+    border-color: rgb(4, 235, 146);
+    border-style: solid
+  }
+
+  h1 {
+    text-align: center
+  }
