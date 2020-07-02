@@ -12,6 +12,7 @@ import PostDelete from './posts/PostDelete'
 
 const App = () => {
     return (
+        <div className="main">
         <div className="ui component">  
             <BrowserRouter>
                 <div>
@@ -25,6 +26,7 @@ const App = () => {
             </BrowserRouter>
         <div>
         <Footer />
+        </div>
         </div>
         </div>
     )

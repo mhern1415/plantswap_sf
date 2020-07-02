@@ -23,3 +23,11 @@ img {
   h1 {
     text-align: center
   }
+
+  .header {
+      background-color: rgb(4, 235, 146);
+  }
+
+  .main {
+      background-color: rgb(250, 246, 227);
+  }

@@ -43,11 +43,18 @@ class PostList extends React.Component {
 
 
     render() {
+        if (this.props.isSignedIn) {
         return (
             <div className="ui four column relaxed grid">
                 {this.renderList()}
             </div>
         )
+        }
+        else {
+            return (
+                <div><h1>Please Sign In To View Your Posts</h1></div>
+            )
+        }
     }
 }
 
@@ -55,7 +62,8 @@ class PostList extends React.Component {
         return {
             posts: state.postReducer.posts,
             loading: state.postReducer.loading,
-            currentUserId: state.auth.userId
+            currentUserId: state.auth.userId,
+            isSignedIn: state.auth.isSignedIn
         }
     }
 
