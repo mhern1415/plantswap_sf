@@ -20,5 +20,5 @@ firsttest = Post.create(
     plant_type: "cutting",
     zip_code: "94110",
     user_id: "1",
-    date: "6/30/20"
+    date: "2020-07-01"
 )
