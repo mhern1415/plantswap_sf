@@ -14,7 +14,7 @@ const Header = () => {
                 </Link>
             </div>
             <div className="right menu">
-                <Link to="/posts/myposts" className="item">
+                <Link to="/posts" className="item">
                     My Posts
                 </Link>
                 <GoogleAuth />

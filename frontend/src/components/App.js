@@ -20,8 +20,8 @@ const App = () => {
                 <Route path="/" exact component={PostAllContainer}/>
                 <Route path="/posts" exact component={PostListContainer}/>
                 <Route path="/posts/new" exact component={PostFormContainer}/>
-                <Route path="/posts/myposts" exact component={PostListContainer}/>
-                <Route path="/post/:id" exact component={PostShowContainer}/>
+                <Route path="/posts/delete" exact component={PostDelete}/>
+                <Route path="/posts/:id" exact component={PostShowContainer}/>
                 </div>
             </BrowserRouter>
         <div>

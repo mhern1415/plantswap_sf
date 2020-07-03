@@ -20,7 +20,7 @@ class PostList extends React.Component {
                     <div className="content">
                         <p>{post.date}</p>
                         <div id="title">
-                            <div><Link to={`/post/${post.id}`}>{post.title}</Link></div>
+                            <div><Link to={`/posts/${post.id}`}>{post.title}</Link></div>
                             <br></br>                        
                             <div>Price: ${post.price}</div>
                             <br></br>
@@ -33,7 +33,7 @@ class PostList extends React.Component {
                             <div><img className="photo" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-responsive" /></div>
                             <br></br>
                             <div><a href={"mailto:" + post.contact}>Click Here To Email Seller</a></div>
-                            <Link to={`/`} onClick={() => this.props.deletePost(post.id)}> Delete </Link>
+                            <Link to={`/posts/delete`} onClick={() => this.props.deletePost(post.id)}> Delete </Link>
 
                         </div>
                     </div>

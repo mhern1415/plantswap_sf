@@ -19,7 +19,7 @@ class PostAll extends React.Component {
                     <div className="content">
                         <p>{post.date}</p>
                         <div id="title">
-                        <div><Link to={`/post/${post.id}`}>{post.title}</Link></div>
+                        <div><Link to={`/posts/${post.id}`}>{post.title}</Link></div>
                             <br></br>                        
                             <div>Price: ${post.price}</div>
                             <br></br>
