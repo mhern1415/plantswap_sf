@@ -13,7 +13,8 @@ class PostList extends React.Component {
 
     renderList = () => {
         const myPosts = this.props.posts.filter(post => post.user_id === this.props.currentUserId);
-        return myPosts.map(post => {
+        const sortedPosts = myPosts.sort((a, b) => b.id - a.id);
+        return sortedPosts.map(post => {
             return (
                 <div className="column" key={post.id}>
                     <div className="content">
