@@ -17,11 +17,13 @@ const App = () => {
             <BrowserRouter>
                 <div>
                 <Header />
+                <Switch>
                 <Route path="/" exact component={PostAllContainer}/>
                 <Route path="/posts" exact component={PostListContainer}/>
                 <Route path="/posts/new" exact component={PostFormContainer}/>
                 <Route path="/posts/delete" exact component={PostDelete}/>
                 <Route path="/posts/:id" exact component={PostShowContainer}/>
+                </Switch>
                 </div>
             </BrowserRouter>
         <div>
