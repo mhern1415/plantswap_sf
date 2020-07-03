@@ -40,6 +40,7 @@ export const addPost = (post, history) => {
     }
 }
 
+
 export const destroyPost = (id) => {
     return fetch(`http://localhost:3002/posts/${id}`, {
         method: 'DELETE',

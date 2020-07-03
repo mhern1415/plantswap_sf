@@ -4,8 +4,14 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../post.css'
 import { deletePost } from '../../reducers/postReducer';
+import Modal from "react-bootstrap/Modal";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 class PostList extends React.Component {
+
+    
+
 
     componentDidMount(props){
         this.props.getPosts();
