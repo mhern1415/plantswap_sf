@@ -39,3 +39,13 @@ export const addPost = (post, history) => {
         .then(posts => dispatch({type: "LOADED_POSTS", payload: posts}))
     }
 }
+
+export const destroyPost = (id) => {
+    return fetch(`http://localhost:3002/posts/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Accept': 'applications/json',
+            'Content-Type': 'application/json'
+        }
+    })
+}

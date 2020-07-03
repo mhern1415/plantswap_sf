@@ -3,7 +3,7 @@ import { getPosts } from '../../actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../post.css'
-///import { deleteContact } from '../../reducers/contactReducer';
+import { deletePost } from '../../reducers/postReducer';
 
 class PostList extends React.Component {
 
@@ -33,7 +33,8 @@ class PostList extends React.Component {
                             <div><img className="photo" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-responsive" /></div>
                             <br></br>
                             <div><a href={"mailto:" + post.contact}>Click Here To Email Seller</a></div>
-    
+                            <Link to={`/`} onClick={() => this.props.deletePost(post.id)}> Delete </Link>
+
                         </div>
                     </div>
                 </div>
@@ -71,4 +72,4 @@ class PostList extends React.Component {
 
 
 
-export default connect(mapStateToProps, {getPosts})(PostList);
+export default connect(mapStateToProps, {getPosts, deletePost})(PostList);
