@@ -27,6 +27,16 @@ const App = () => {
                 </div>
             </BrowserRouter>
         <div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         <Footer />
         </div>
         </div>
