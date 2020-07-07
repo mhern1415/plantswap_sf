@@ -12,6 +12,8 @@ class PostAll extends React.Component {
     }
 
     renderList = () => {
+        const message = "Hello. I am interested in purchasing your "
+        const message2 = " that is listed on Plant Swap SF."
         const sortedPosts = this.props.posts.sort((a, b) => b.id - a.id);
         return sortedPosts.map(post => {
             return (
@@ -31,7 +33,7 @@ class PostAll extends React.Component {
                             <br></br>
                             <div><img className="photo" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-responsive" /></div>
                             <br></br>
-                            <div><a href={"mailto:" + post.contact}>Click Here To Email Seller</a></div>
+                            <div><a href={"mailto:" + post.contact + "?subject=" + post.title + "- Plant Swap SF" + "&body=" + message + post.title + message2} target="_blank">Click Here To Email Seller</a></div>
     
                         </div>
                     </div>
