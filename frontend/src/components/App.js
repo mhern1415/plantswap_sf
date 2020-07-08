@@ -9,6 +9,7 @@ import Footer from './Footer'
 import PostAllContainer from './posts/PostAllContainer'
 import PostDelete from './posts/PostDelete'
 import Title from './Title';
+import Resources from './Resources';
 
 
 
@@ -28,7 +29,7 @@ class App extends React.Component {
                 <Route path="/posts/delete" exact component={PostDelete}/>
                 <Route path="/posts/:id" exact component={PostShow}/>
                 <Route path ="/edit/:id" exact component={PostEditContainer}/>
-            
+                <Route path ="/resources" exact component={Resources}/>
                 </Switch>
                 </div>
             </BrowserRouter>

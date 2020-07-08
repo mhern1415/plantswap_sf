@@ -19,6 +19,7 @@ const Header = () => {
                 <Link to="/posts" className="item">
                     My Posts
                 </Link>
+                <Link to="/resources" className="item">Resources</Link>
                 <GoogleAuth />
             </div>
         </div>
