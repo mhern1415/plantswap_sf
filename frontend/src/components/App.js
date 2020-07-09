@@ -28,7 +28,6 @@ class App extends React.Component {
                 <Route path="/posts/new" exact component={PostFormContainer}/>
                 <Route path="/posts/delete" exact component={PostDelete}/>
                 <Route path="/posts/:id" exact component={PostShow}/>
-                <Route path ="/edit/:id" exact component={PostEditContainer}/>
                 <Route path ="/resources" exact component={Resources}/>
                 </Switch>
                 </div>

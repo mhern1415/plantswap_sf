@@ -13,58 +13,47 @@ class PostShow extends React.Component {
     
 
 
-    componentDidMount(props){
+    componentDidMount(){
         this.props.getPosts();
     }
-
-    renderList = () => {
-        const myPosts = this.props.posts.filter(post => post.user_id === this.props.currentUserId);
-        const sortedPosts = myPosts.sort((a, b) => b.id - a.id);
-        return sortedPosts.map(post => {
-            return (
-                <div className="column" key={post.id}>
-                    <div className="content">
-                        <p>{post.date}</p>
-                        <div id="title">
-                            <div><Link to={`/posts/${post.id}`}>{post.title}</Link></div>
-                            <br></br>                        
-                            <div>Price: ${post.price}</div>
-                            <br></br>
-                            <div>Description: {post.description}</div>
-                            <br></br>
-                            <div>Zip: {post.zip_code}</div>
-                            <br></br>
-                            <div>Plant Type: {post.plant_type}</div>
-                            <br></br>
-                            <div><img className="photo" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-responsive" /></div>
-                            <br></br>
-                            <div><a href={"mailto:" + post.contact}>Click Here To Email Seller</a></div>
-                            <Link to={`/posts/delete`} onClick={() => this.props.deletePost(post.id)}> Delete </Link>
-
-                        </div>
-                    </div>
-                </div>
-            )  
-        })
-    }
-
-
+    
 
     render() {
-        if (this.props.isSignedIn) {
-        return (
-            <div className="ui four column relaxed grid">
-                {this.renderList()}
+        const message = "Hello. I am interested in purchasing your "
+        const message2 = " that is listed on Plant Swap SF."
+        const post = this.props.posts.find(post => post.id == this.props.match.params.id)
+        if(typeof post !=="undefined" && typeof post.id !=="undefined" && typeof post.date !=="undefined" && typeof post.title !=="undefined" && typeof post.price !=="undefined" && typeof post.description !=="undefined" && typeof post.zip_code !=="undefined" && typeof post.plant_type !=="undefined" && typeof post.image_url !=="undefined" && typeof post.contact !=="undefined") {
+            return <div className="column">
+            <div className="content">
+                <p>{post.date}</p>
+                <div id="title">
+                    <div><Link to={`/posts/${post.id}`}>{post.title}</Link></div>
+                    <br></br>                        
+                    <div className="itemPrice">Price: ${post.price}</div>
+                    <br></br>
+                    <div>Description: {post.description}</div>
+                    <br></br>
+                    <div>Zip: {post.zip_code}</div>
+                    <br></br>
+                    <div>Plant Type: {post.plant_type}</div>
+                    <br></br>
+                    <div><img className="photo-large" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-large" /></div>
+                    <br></br>
+                    <button className="ui button">
+                    <div><a href={"mailto:" + post.contact + "?subject=" + post.title + " - Plant Swap SF" + "&body=" + message + post.title + message2} target="_blank"><i className="envelope outline icon"></i>
+Email Seller</a></div>
+</button>
+                </div>
             </div>
-        )
-        }
-        else {
-            return (
-                <div><h1>Please Sign In To View Your Posts</h1></div>
-            )
+        </div>
+;
+        } else {
+        return null;
         }
     }
 }
+
+
 
     const mapStateToProps = state => {
         return {
