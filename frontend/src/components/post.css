@@ -1,6 +1,10 @@
-img {
+.img-responsive {
     height: 300px;
     width: 300px;
+  }
+  .img-large {
+    height: 600px;
+    width: 600px;
   }
 
 .column {

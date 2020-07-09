@@ -39,7 +39,8 @@ class PostList extends React.Component {
                             <br></br>
                             <div><img className="photo" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-responsive" /></div>
                             <br></br>
-                            <Link to={`/posts/delete`} onClick={() => this.props.deletePost(post.id)}> Delete </Link>
+                            <Link to={`/posts/delete`} className="ui red button" onClick={() => this.props.deletePost(post.id)}><i className="trash alternate icon"></i>
+ Delete </Link>
 
                         </div>
                     </div>

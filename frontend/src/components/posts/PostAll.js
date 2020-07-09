@@ -23,7 +23,7 @@ class PostAll extends React.Component {
                         <div id="title">
                         <div><Link to={`/posts/${post.id}`}>{post.title}</Link></div>
                             <br></br>                        
-                            <div>Price: ${post.price}</div>
+                            <div className="itemPrice">Price: ${post.price}</div>
                             <br></br>
                             <div>Description: {post.description}</div>
                             <br></br>
@@ -33,8 +33,10 @@ class PostAll extends React.Component {
                             <br></br>
                             <div><img className="photo" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-responsive" /></div>
                             <br></br>
-                            <div><a href={"mailto:" + post.contact + "?subject=" + post.title + "- Plant Swap SF" + "&body=" + message + post.title + message2} target="_blank">Click Here To Email Seller</a></div>
-    
+                            <button className="ui button">
+                            <div><a href={"mailto:" + post.contact + "?subject=" + post.title + " - Plant Swap SF" + "&body=" + message + post.title + message2} target="_blank"><i className="envelope outline icon"></i>
+Email Seller</a></div>
+                            </button>
                         </div>
                     </div>
                 </div>
