@@ -50,3 +50,20 @@ export const destroyPost = (id) => {
         }
     })
 }
+
+export const updatePost = (post) => {
+    return fetch(`http://localhost:3002/posts/${post.id}`, {
+      method: "PUT",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify(post)
+    }).then(resp => resp.json())
+}
+
+export const fetchPost = (id) => async dispatch => {
+    const response = await posts.get(`http://localhost:3002/posts/${id}`)
+  
+    dispatch({ type: 'FETCH_POST', payload: response.data})
+  }
