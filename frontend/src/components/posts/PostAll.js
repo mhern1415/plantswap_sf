@@ -20,9 +20,14 @@ class PostAll extends React.Component {
                 <div className="column" key={post.id}>
                     <div className="content">
                         <p>{post.date}</p>
-                        <div id="title">
+                        <div id="title">                            
                         <div><Link to={`/posts/${post.id}`}>{post.title}</Link></div>
-                            <br></br>                        
+                            <br></br> 
+                            <button className="ui button">
+                            < a target="_blank" href={`https://garden.org/plants/search/text.php?q=${post.title}`}><i className="info circle icon"></i>Plants Database Info</a>
+                            </button>
+                            <br></br>  
+                            <br></br>                     
                             <div className="itemPrice">Price: ${post.price}</div>
                             <br></br>
                             <div>Description: {post.description}</div>
@@ -31,11 +36,11 @@ class PostAll extends React.Component {
                             <br></br>
                             <div>Plant Type: {post.plant_type}</div>
                             <br></br>
-                            <div><img className="photo" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-responsive" /></div>
+                            <div><Link to={`/posts/${post.id}`}><img className="photo" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-responsive" /></Link></div>
                             <br></br>
                             <button className="ui button">
                             <div><a href={"mailto:" + post.contact + "?subject=" + post.title + " - Plant Swap SF" + "&body=" + message + post.title + message2} target="_blank"><i className="envelope outline icon"></i>
-Email Seller</a></div>
+                            Email Seller</a></div>
                             </button>
                         </div>
                     </div>
