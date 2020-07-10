@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import PostFormContainer from './posts/PostFormContainer'
 import PostListContainer from './posts/PostListContainer'
-import PostEditContainer from './posts/PostEditContainer'
 import PostShow from './posts/PostShow'
 import Header from './Header'
 import Footer from './Footer'
