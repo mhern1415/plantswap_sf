@@ -26,7 +26,6 @@ class PostList extends React.Component {
                     <div className="content">
                         <p>{post.date}</p>
                         <div id="title">
-                            <div><Link to={`/edit/${post.id}`}>Edit</Link></div>
                             <Link to={`/posts/${post.id}`}>{post.title}</Link>
                             <br></br>                        
                             <div>Price: ${post.price}</div>
