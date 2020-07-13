@@ -2,17 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+
+     const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+
+
     return (
-        <div className="header">
-        <div className="ui secondary pointing menu">
-            <div className="center menu">
-               hi
-            </div>
-            <div className="right menu">
-                hi
-            </div>
-        </div>
-        </div>
+             <div>
+             <h5 className="ui center aligned icon header">
+             <button onClick={scrollToTop} className="ui red google button">
+             <i className="arrow alternate circle up icon" />
+                    Scroll to top
+                    </button>
+             </h5>
+         </div>
     )
 }
 
