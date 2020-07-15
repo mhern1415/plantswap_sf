@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../post.css'
 import { deletePost } from '../../reducers/postReducer';
-import Modal from "react-bootstrap/Modal";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 
 class PostList extends React.Component {
@@ -36,7 +34,7 @@ class PostList extends React.Component {
                             <br></br>
                             <div>Plant Type: {post.plant_type}</div>
                             <br></br>
-                            <div><img className="photo" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-responsive" /></div>
+                            <div><img className="photo" src={post.image_url} alt={`${this.props.title}`}  className="img-responsive" /></div>
                             <br></br>
                             <Link to={`/posts/delete`} className="ui red button" onClick={() => this.props.deletePost(post.id)}><i className="trash alternate icon"></i>
  Delete </Link>

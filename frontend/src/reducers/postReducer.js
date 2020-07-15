@@ -1,4 +1,4 @@
-import { destroyPost, updatePost } from '../actions';
+import { destroyPost } from '../actions';
 
 export const deletePost = (id, history) => {
     return (dispatch) => {
@@ -10,18 +10,7 @@ export const deletePost = (id, history) => {
 
 export const removePost = (id) => ({type: 'DELETE_POST'})
 
-export const editPost = (id) => {
-    return (dispatch, getState) => {
-      const {posts} = getState().post
-      const post = posts.find(t => t.id == id)
-      const data = getState(id) 
-      updatePost(data)
-        .then(res => dispatch(replacePost(res)))
-    }
-  }
-  
-  export const replacePost = (post) => ({type: 'POST_REPLACE', payload: post })
-  
+
 
 export default (state = {posts: [], loading: false}, action) => {
     switch (action.type){

@@ -8,7 +8,7 @@ const Resources = () => {
             <h2>How to Care For Houseplants</h2>
             <br></br>
             <br></br>
-            <img class="ui centered large image" src="https://media3.s-nbcnews.com/j/newscms/2019_52/1512806/succulent-watering-today-main-tease-191126_f7bc2b519fc1ebc92ef4ce3c5085aa16.fit-760w.jpg"/>
+            <img class="ui centered large image" src="https://media3.s-nbcnews.com/j/newscms/2019_52/1512806/succulent-watering-today-main-tease-191126_f7bc2b519fc1ebc92ef4ce3c5085aa16.fit-760w.jpg" alt="garden"/>
                 <div class="ui text container">
                 <br></br>
                 <br></br>
@@ -22,7 +22,7 @@ const Resources = () => {
                 <h2>How to Care For Succulents</h2>
                 <br></br>
             <br></br>
-                <img class="ui centered large image" src="https://ucanr.edu/sites/mgscc2016/files/280858.jpg"/>
+                <img class="ui centered large image" src="https://ucanr.edu/sites/mgscc2016/files/280858.jpg" alt="succulents"/>
                 <div class="ui text container">
                 <br></br>
                 <br></br>

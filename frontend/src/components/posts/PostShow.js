@@ -1,11 +1,9 @@
 import React from 'react';
 import { getPosts } from '../../actions';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import '../post.css'
 import { deletePost } from '../../reducers/postReducer';
-import Modal from "react-bootstrap/Modal";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 class PostShow extends React.Component {
@@ -42,7 +40,7 @@ class PostShow extends React.Component {
                     <br></br>
                     <div>Plant Type: {post.plant_type}</div>
                     <br></br>
-                    <div><img className="photo-large" src={post.image_url} alt={`${this.props.title}'s picture`}  className="img-large" /></div>
+                    <div><img className="photo-large" src={post.image_url} alt={`${this.props.title}`}  className="img-large" /></div>
                     <br></br>
                     <button className="ui button">
                     <div><a href={"mailto:" + post.contact + "?subject=" + post.title + " - Plant Swap SF" + "&body=" + message + post.title + message2} target="_blank"><i className="envelope outline icon"></i>

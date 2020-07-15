@@ -1,6 +1,5 @@
 import { SIGN_IN, SIGN_OUT } from './types';
 import posts from '../apis/posts';
-import axios from 'axios'
 
 export const signIn = (userId, userEmail) => {
     return {
