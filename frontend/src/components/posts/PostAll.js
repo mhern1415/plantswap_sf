@@ -35,7 +35,7 @@ class PostAll extends React.Component {
                             <br></br>
                             <div>Plant Type: {post.plant_type}</div>
                             <br></br>
-                            <div><Link to={`/posts/${post.id}`}><img className="photo" src={post.image_url} alt={`${this.props.title}`}  className="img-responsive" /></Link></div>
+                            <div><Link to={`/posts/${post.id}`}><img className="ui fluid image" src={post.image_url} alt={`${this.props.title}`}  className="img-responsive" /></Link></div>
                             <br></br>
                             <button className="ui button">
                             <div><a href={"mailto:" + post.contact + "?subject=" + post.title + " - Plant Swap SF" + "&body=" + message + post.title + message2} target="_blank"><i className="envelope outline icon"></i>
