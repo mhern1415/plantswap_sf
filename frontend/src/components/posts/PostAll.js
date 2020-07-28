@@ -6,7 +6,7 @@ import '../post.css';
 
 class PostAll extends React.Component {
 
-    componentDidMount(props){
+    componentDidMount(){
         this.props.getPosts();
     }
 
@@ -62,7 +62,6 @@ class PostAll extends React.Component {
     const mapStateToProps = state => {
         return {
             posts: state.postReducer.posts,
-            loading: state.postReducer.loading,
             currentUserId: state.auth.userId
         }
     }

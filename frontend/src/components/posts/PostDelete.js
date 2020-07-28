@@ -1,6 +1,6 @@
 import React from 'react';
-///import ContactForm from './ContactForm';
-///import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 
 const PostDelete = () => {
 
@@ -11,6 +11,22 @@ const PostDelete = () => {
 
      <div>
             <h1>Post Deleted Successfully</h1>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h1><Link to="/" className="item">
+             Home
+            </Link>
+            </h1>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </div>
     )
 
