@@ -1,15 +1,3 @@
-import { destroyPost } from '../actions';
-
-export const deletePost = (id) => {
-    return (dispatch) => {
-        destroyPost(id).then(() => dispatch(removePost(id)))
-    }
-}
-
-
-export const removePost = () => ({type: 'DELETE_POST'})
-
-
 
 export default (state = {posts: [], loading: false}, action) => {
     switch (action.type){

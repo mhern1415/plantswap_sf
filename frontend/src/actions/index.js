@@ -49,4 +49,15 @@ export const destroyPost = (id) => {
     })
 }
 
+export const deletePost = (id) => {
+  return (dispatch) => {
+      destroyPost(id).then(() => dispatch(removePost(id)))
+  }
+}
+
+
+export const removePost = () => ({type: 'DELETE_POST'})
+
+
+
 
