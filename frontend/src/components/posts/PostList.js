@@ -11,7 +11,7 @@ class PostList extends React.Component {
     
 
 
-    componentDidMount(props){
+    componentDidMount(){
         this.props.getPosts();
     }
 
@@ -67,7 +67,6 @@ class PostList extends React.Component {
     const mapStateToProps = state => {
         return {
             posts: state.postReducer.posts,
-            loading: state.postReducer.loading,
             currentUserId: state.auth.userId,
             isSignedIn: state.auth.isSignedIn
         }
