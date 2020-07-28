@@ -3,7 +3,7 @@ import { getPosts } from '../../actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../post.css'
-import { deletePost } from '../../reducers/postReducer';
+import { deletePost } from '../../actions';
 
 
 class PostList extends React.Component {
