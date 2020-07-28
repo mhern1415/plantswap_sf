@@ -1,14 +1,13 @@
 import { destroyPost } from '../actions';
 
-export const deletePost = (id, history) => {
+export const deletePost = (id) => {
     return (dispatch) => {
         destroyPost(id).then(() => dispatch(removePost(id)))
     }
-    history.push('/')
 }
 
 
-export const removePost = (id) => ({type: 'DELETE_POST'})
+export const removePost = () => ({type: 'DELETE_POST'})
 
 
 
@@ -31,17 +30,11 @@ export default (state = {posts: [], loading: false}, action) => {
                 loading: false,
                 posts: action.payload
             }
-            case "DELETE_POST":
+        case "DELETE_POST":
             const posts = state.posts.filter(post => post.id !==action.id)
             return {
                 ...state,
                 posts
-            }
-            case "POST_REPLACE":
-            return {
-            ...state,
-            posts: state.posts
-            .map(post => post.id === action.payload.id ? action.payload : post)
             }
             default:
                 return state;
