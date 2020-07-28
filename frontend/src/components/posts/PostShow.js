@@ -2,7 +2,6 @@ import React from 'react';
 import { getPosts } from '../../actions';
 import { connect } from 'react-redux';
 import '../post.css'
-import { deletePost } from '../../reducers/postReducer';
 
 
 
@@ -70,4 +69,4 @@ class PostShow extends React.Component {
 
 
 
-export default connect(mapStateToProps, {getPosts, deletePost})(PostShow);
+export default connect(mapStateToProps, {getPosts})(PostShow);
