@@ -3,8 +3,15 @@ import { getPosts } from '../../actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../post.css';
-
+import Counter from './Counter'
 class PostAll extends React.Component {
+
+    constructor (props) {
+      super(props) 
+      this.state = {counter: 0}
+    }
+
+   
 
     componentDidMount(){
         this.props.getPosts();
@@ -44,6 +51,7 @@ class PostAll extends React.Component {
                             <div><a href={"mailto:" + post.contact + "?subject=" + post.title + " - Plant Swap SF" + "&body=" + message + post.title + message2} target="_blank"><i className="envelope outline icon"></i>
                             Email Seller</a></div>
                             </button>
+                            < Counter />
                         </div>
                     </div>
                 </div>
