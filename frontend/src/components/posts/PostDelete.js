@@ -23,6 +23,10 @@ const PostDelete = () => {
             </h1>
             <br></br>
             <br></br>
+            <h1><Link to="/posts" className="item">
+             My Posts
+            </Link>
+            </h1>
             <br></br>
             <br></br>
             <br></br>
