@@ -31,7 +31,7 @@ class PostForm extends React.Component {
     handleOnSubmit(event){
         event.preventDefault();
 
-        var request = {
+        let request = {
             title: this.state.title,
             user_id: this.props.currentUserId,
             price: this.state.price,
