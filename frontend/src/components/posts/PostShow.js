@@ -60,9 +60,7 @@ class PostShow extends React.Component {
     const mapStateToProps = state => {
         return {
             posts: state.postReducer.posts,
-            loading: state.postReducer.loading,
-            currentUserId: state.auth.userId,
-            isSignedIn: state.auth.isSignedIn
+            
         }
     }
 
