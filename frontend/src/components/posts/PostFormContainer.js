@@ -19,7 +19,12 @@ class PostFormContainer extends React.Component {
     }
     else {
         return (
-        <div><h1>Please Sign In!</h1></div>
+        <div>
+        <br></br>
+        <br></br>
+        <h1>Please Sign In!</h1>
+        <br></br>
+        </div>
         )
     }
 }
@@ -27,8 +32,6 @@ class PostFormContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        currentUserId: state.auth.userId,
-        currentUserEmail: state.auth.userEmail,
         isSignedIn: state.auth.isSignedIn
 };
 };

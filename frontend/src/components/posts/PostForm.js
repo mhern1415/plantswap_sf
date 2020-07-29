@@ -41,19 +41,10 @@ class PostForm extends React.Component {
             zip_code: this.state.zip_code
           }      
         
+        
         this.props.addPost(request, this.props.history)
-        this.setState({
-            title: '',
-            price: '',
-            description: '',
-            image_url: '',
-            contact: '',
-            zip_code: '',
-            date: '',
-            plant_type: '',
-            user_id: ''
-            
-        })
+
+
     }
     
     render() {

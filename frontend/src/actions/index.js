@@ -38,6 +38,11 @@ export const addPost = (post, history) => {
     }
 }
 
+export const deletePost = (id) => {
+  return (dispatch) => {
+      destroyPost(id).then(() => dispatch(removePost(id)))
+  }
+}
 
 export const destroyPost = (id) => {
     return fetch(`http://localhost:3002/posts/${id}`, {
@@ -48,13 +53,6 @@ export const destroyPost = (id) => {
         }
     })
 }
-
-export const deletePost = (id) => {
-  return (dispatch) => {
-      destroyPost(id).then(() => dispatch(removePost(id)))
-  }
-}
-
 
 export const removePost = () => ({type: 'DELETE_POST'})
 
