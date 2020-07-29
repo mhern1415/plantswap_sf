@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { addPost } from '../../actions'
+
 
 class PostForm extends React.Component {
 
@@ -173,4 +175,4 @@ const mapStateToProps = state => {
 };
 };
 
-export default connect(mapStateToProps)(PostForm);
+export default connect(mapStateToProps, {addPost})(PostForm);

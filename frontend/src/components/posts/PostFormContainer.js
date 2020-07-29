@@ -1,7 +1,6 @@
 import React from 'react';
 import PostForm from './PostForm';
 import { connect } from 'react-redux';
-import { addPost } from '../../actions'
 
 class PostFormContainer extends React.Component {
 
@@ -13,7 +12,7 @@ class PostFormContainer extends React.Component {
     return (
      <div>
             <h1>Post Your Plant!</h1>
-            <div><PostForm addPost={this.props.addPost} history={this.props.history} /></div>
+            <div><PostForm history={this.props.history} /></div>
         </div>
     )
     }
@@ -36,4 +35,4 @@ const mapStateToProps = state => {
 };
 };
 
-export default connect(mapStateToProps, { addPost })(PostFormContainer);
+export default connect(mapStateToProps)(PostFormContainer);
