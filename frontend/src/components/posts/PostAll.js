@@ -31,7 +31,10 @@ class PostAll extends React.Component {
                             <br></br>
                             <div>Description: {post.description}</div>
                             <br></br>
-                            <div>Zip: {post.zip_code}</div>
+                            <button className="ui button">
+                            < a target="_blank" href={`https://www.unitedstateszipcodes.org/${post.zip_code}/`}><i className="map marker alternate icon"></i>{post.zip_code}</a>
+                            </button>
+                            <br></br>
                             <br></br>
                             <div>Plant Type: {post.plant_type}</div>
                             <br></br>
